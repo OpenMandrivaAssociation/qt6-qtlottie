@@ -1,11 +1,11 @@
-#define beta rc
+%define beta beta2
 #define snapshot 20200627
 %define major 6
 
 %define _qtdir %{_libdir}/qt%{major}
 
 Name:		qt6-qtlottie
-Version:	6.9.1
+Version:	6.10.0
 Release:	%{?beta:0.%{beta}.}%{?snapshot:0.%{snapshot}.}1
 %if 0%{?snapshot:1}
 # "git archive"-d from "dev" branch of git://code.qt.io/qt/qtbase.git
@@ -43,13 +43,34 @@ BuildRequires:	cmake(Clang)
 BuildRequires:	%{_lib}gpuruntime
 License:	LGPLv3/GPLv3/GPLv2
 
+%patchlist
+qtlottie-6.10-workaround-cmakefile-breakage.patch
+
 %description
 Qt %{major} support for Lottie animations
 
-%global extra_devel_files_Bodymovin \
+%package examples
+Summary:	Example files demonstrating the use of %{name}
+Group:		Documentation
+
+%description examples
+Example files demonstrating the use of %{name}
+
+%files examples
+%{_qtdir}/examples/*
+
+%global extra_files_Lottie \
+%dir %{_qtdir}/plugins/vectorimageformats \
+%{_qtdir}/plugins/vectorimageformats/libqlottievectorimage.so
+
+%global extra_devel_files_Lottie \
+%{_qtdir}/bin/lottietoqml \
 %{_qtdir}/sbom/*
 
-%qt6libs Bodymovin
+%global extra_devel_files_LottieVectorImageGenerator \
+%{_qtdir}/lib/cmake/Qt6QuickVectorImageGeneratorPrivate
+
+%qt6libs Lottie LottieVectorImageGenerator LottieVectorImageHelpers
 
 %prep
 %autosetup -p1 -n qtlottie%{!?snapshot:-everywhere-src-%{version}%{?beta:-%{beta}}}
