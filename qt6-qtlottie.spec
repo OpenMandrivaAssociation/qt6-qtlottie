@@ -19,6 +19,7 @@ BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	cmake(Qt%{major}Core)
 BuildRequires:	cmake(Qt%{major}Gui)
+BuildRequires:	cmake(Qt%{major}GuiTools)
 BuildRequires:	cmake(Qt%{major}Network)
 BuildRequires:	cmake(Qt%{major}Xml)
 BuildRequires:	cmake(Qt%{major}Widgets)
@@ -30,9 +31,11 @@ BuildRequires:	cmake(Qt%{major}DBus)
 BuildRequires:	cmake(Qt%{major}Qml)
 BuildRequires:	cmake(Qt%{major}QmlModels)
 BuildRequires:	cmake(Qt%{major}Quick)
+BuildRequires:	cmake(Qt%{major}QuickPrivate)
 BuildRequires:	cmake(Qt%{major}QuickTest)
 BuildRequires:	cmake(Qt%{major}QuickVectorImage)
 BuildRequires:	cmake(Qt%{major}QuickVectorImageHelpers)
+BuildRequires:	cmake(Qt%{major}QuickVectorImageGeneratorPrivate)
 BuildRequires:	cmake(Qt%{major}QuickShapesPrivate)
 BuildRequires:	qt%{major}-cmake
 BuildRequires:	qt%{major}-qtdeclarative
