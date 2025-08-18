@@ -19,6 +19,7 @@ BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	cmake(Qt%{major}Core)
 BuildRequires:	cmake(Qt%{major}Gui)
+BuildRequires:	cmake(Qt%{major}GuiPrivate)
 BuildRequires:	cmake(Qt%{major}GuiTools)
 BuildRequires:	cmake(Qt%{major}Network)
 BuildRequires:	cmake(Qt%{major}Xml)
