@@ -31,6 +31,8 @@ BuildRequires:	cmake(Qt%{major}Qml)
 BuildRequires:	cmake(Qt%{major}QmlModels)
 BuildRequires:	cmake(Qt%{major}Quick)
 BuildRequires:	cmake(Qt%{major}QuickTest)
+BuildRequires:	cmake(Qt%{major}QuickVectorImageGeneratorPrivate)
+BuildRequires:	cmake(Qt%{major}QuickShapesPrivate)
 BuildRequires:	qt%{major}-cmake
 BuildRequires:	qt%{major}-qtdeclarative
 BuildRequires:	pkgconfig(gl)
