@@ -5,7 +5,7 @@
 %define _qtdir %{_libdir}/qt%{major}
 
 Name:		qt6-qtlottie
-Version:	6.10.0
+Version:	6.10.1
 Release:	%{?beta:0.%{beta}.}%{?snapshot:0.%{snapshot}.}1
 %if 0%{?snapshot:1}
 # "git archive"-d from "dev" branch of git://code.qt.io/qt/qtbase.git
@@ -77,7 +77,7 @@ Example files demonstrating the use of %{name}
 %{_qtdir}/sbom/*
 
 %global extra_devel_files_LottieVectorImageGenerator \
-%{_qtdir}/lib/cmake/Qt6QuickVectorImageGeneratorPrivate
+%{_qtdir}/lib/cmake/Qt6Quick/Qt6QLottieVectorImagePlugin*
 
 %qt6libs Lottie LottieVectorImageGenerator LottieVectorImageHelpers
 
