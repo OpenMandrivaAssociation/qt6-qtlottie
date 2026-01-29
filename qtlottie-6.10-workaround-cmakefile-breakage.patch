@@ -1,26 +1,3 @@
-diff -up qtlottie-everywhere-src-6.10.0-beta2/examples/lottie/CMakeLists.txt.omv~ qtlottie-everywhere-src-6.10.0-beta2/examples/lottie/CMakeLists.txt
-diff -up qtlottie-everywhere-src-6.10.0-beta2/examples/lottie/lottietoqml/CMakeLists.txt.omv~ qtlottie-everywhere-src-6.10.0-beta2/examples/lottie/lottietoqml/CMakeLists.txt
-diff -up qtlottie-everywhere-src-6.10.0-beta2/examples/lottie/qtlottieviewer/CMakeLists.txt.omv~ qtlottie-everywhere-src-6.10.0-beta2/examples/lottie/qtlottieviewer/CMakeLists.txt
---- qtlottie-everywhere-src-6.10.0-beta2/examples/lottie/qtlottieviewer/CMakeLists.txt.omv~	2025-08-15 18:40:37.828753162 +0200
-+++ qtlottie-everywhere-src-6.10.0-beta2/examples/lottie/qtlottieviewer/CMakeLists.txt	2025-08-15 18:43:29.753084197 +0200
-@@ -7,7 +7,7 @@ project(qtlottieviewer LANGUAGES CXX)
- 
- set(CMAKE_CXX_STANDARD_REQUIRED ON)
- 
--find_package(Qt6 REQUIRED COMPONENTS Core Gui Qml Quick QuickControls2)
-+find_package(Qt6 REQUIRED COMPONENTS Core Gui Qml Quick)
- 
- qt_standard_project_setup(REQUIRES 6.8)
- 
-@@ -36,7 +36,7 @@ target_link_libraries(qtlottieviewerexam
-     Qt6::Gui
-     Qt6::Qml
-     Qt6::Quick
--    Qt6::QuickControls2
-+    /usr/lib64/qt6/lib/libQt6QuickControls2.so
- )
- 
- set(resource_files
 diff -up qtlottie-everywhere-src-6.10.2/tools/lottietoqml/CMakeLists.txt.omv~ qtlottie-everywhere-src-6.10.2/tools/lottietoqml/CMakeLists.txt
 --- qtlottie-everywhere-src-6.10.2/tools/lottietoqml/CMakeLists.txt.omv~	2026-01-29 20:38:39.959025533 +0100
 +++ qtlottie-everywhere-src-6.10.2/tools/lottietoqml/CMakeLists.txt	2026-01-29 20:38:55.990083409 +0100
