@@ -21,3 +21,15 @@ diff -up qtlottie-everywhere-src-6.10.0-beta2/examples/lottie/qtlottieviewer/CMa
  )
  
  set(resource_files
+diff -up qtlottie-everywhere-src-6.10.2/tools/lottietoqml/CMakeLists.txt.omv~ qtlottie-everywhere-src-6.10.2/tools/lottietoqml/CMakeLists.txt
+--- qtlottie-everywhere-src-6.10.2/tools/lottietoqml/CMakeLists.txt.omv~	2026-01-29 20:38:39.959025533 +0100
++++ qtlottie-everywhere-src-6.10.2/tools/lottietoqml/CMakeLists.txt	2026-01-29 20:38:55.990083409 +0100
+@@ -6,7 +6,7 @@
+ #####################################################################
+ 
+ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS QuickVectorImageGeneratorPrivate)
+-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS QuickVectorImageGeneratorPrivate)
++find_package(Qt6 REQUIRED COMPONENTS QuickVectorImageGeneratorPrivate)
+ 
+ qt_get_tool_target_name(target_name lottietoqml)
+ qt_internal_add_tool(${target_name}

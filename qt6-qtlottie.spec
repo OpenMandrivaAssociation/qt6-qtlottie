@@ -5,7 +5,7 @@
 %define _qtdir %{_libdir}/qt%{major}
 
 Name:		qt6-qtlottie
-Version:	6.10.1
+Version:	6.10.2
 Release:	%{?beta:0.%{beta}.}%{?snapshot:0.%{snapshot}.}1
 %if 0%{?snapshot:1}
 # "git archive"-d from "dev" branch of git://code.qt.io/qt/qtbase.git
@@ -88,7 +88,8 @@ Example files demonstrating the use of %{name}
 	-DCMAKE_INSTALL_PREFIX=%{_qtdir} \
 	-DQT_BUILD_EXAMPLES:BOOL=ON \
 	-DQT_WILL_INSTALL:BOOL=ON \
-	-DQT_MKSPECS_DIR:FILEPATH=%{_qtdir}/mkspecs
+	-DQT_MKSPECS_DIR:FILEPATH=%{_qtdir}/mkspecs \
+	-DQT_VERSION_MAJOR=6
 
 %build
 %ninja_build -C build
