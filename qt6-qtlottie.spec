@@ -95,6 +95,7 @@ Example files demonstrating the use of %{name}
 	-DQT_VERSION_MAJOR=6
 
 %build
+export LD_LIBRARY_PATH=$(pwd)/build/lib:$LD_LIBRARY_PATH
 %ninja_build -C build
 
 %install
