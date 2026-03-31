@@ -67,7 +67,7 @@ Group:		Documentation
 Example files demonstrating the use of %{name}
 
 %files examples
-#{_qtdir}/examples/*
+%{_qtdir}/examples/*
 
 %global extra_files_Lottie \
 %dir %{_qtdir}/plugins/vectorimageformats \
@@ -89,7 +89,7 @@ Example files demonstrating the use of %{name}
 # This is probably a bigger error somewhere else that needs to be fixed.
 %cmake -G Ninja \
 	-DCMAKE_INSTALL_PREFIX=%{_qtdir} \
-	-DQT_BUILD_EXAMPLES:BOOL=OFF \
+	-DQT_BUILD_EXAMPLES:BOOL=ON \
 	-DQT_WILL_INSTALL:BOOL=ON \
 	-DQT_MKSPECS_DIR:FILEPATH=%{_qtdir}/mkspecs \
 	-DQT_VERSION_MAJOR=6
