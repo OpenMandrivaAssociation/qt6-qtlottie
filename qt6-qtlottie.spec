@@ -5,7 +5,7 @@
 %define _qtdir %{_libdir}/qt%{major}
 
 Name:		qt6-qtlottie
-Version:	6.10.2
+Version:	6.11.0
 Release:	%{?beta:0.%{beta}.}%{?snapshot:0.%{snapshot}.}1
 %if 0%{?snapshot:1}
 # "git archive"-d from "dev" branch of git://code.qt.io/qt/qtbase.git
@@ -67,7 +67,7 @@ Group:		Documentation
 Example files demonstrating the use of %{name}
 
 %files examples
-%{_qtdir}/examples/*
+#{_qtdir}/examples/*
 
 %global extra_files_Lottie \
 %dir %{_qtdir}/plugins/vectorimageformats \
@@ -84,9 +84,12 @@ Example files demonstrating the use of %{name}
 
 %prep
 %autosetup -p1 -n qtlottie%{!?snapshot:-everywhere-src-%{version}%{?beta:-%{beta}}}
+# FIXME examples are currently disabled because lottietoqml
+# throws a bad_alloc.
+# This is probably a bigger error somewhere else that needs to be fixed.
 %cmake -G Ninja \
 	-DCMAKE_INSTALL_PREFIX=%{_qtdir} \
-	-DQT_BUILD_EXAMPLES:BOOL=ON \
+	-DQT_BUILD_EXAMPLES:BOOL=OFF \
 	-DQT_WILL_INSTALL:BOOL=ON \
 	-DQT_MKSPECS_DIR:FILEPATH=%{_qtdir}/mkspecs \
 	-DQT_VERSION_MAJOR=6
