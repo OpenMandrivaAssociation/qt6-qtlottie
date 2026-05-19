@@ -80,6 +80,9 @@ Example files demonstrating the use of %{name}
 %global extra_devel_files_LottieVectorImageGenerator \
 %{_qtdir}/lib/cmake/Qt6Quick/Qt6QLottieVectorImagePlugin*
 
+%global extra_devel_reqprov_LottieVectorImageGenerator \
+Provides: cmake(Qt6LottieVectorImageGeneratorPrivatePrivate) = %{EVRD}
+
 %qt6libs Lottie LottieVectorImageGenerator LottieVectorImageHelpers
 
 %prep
