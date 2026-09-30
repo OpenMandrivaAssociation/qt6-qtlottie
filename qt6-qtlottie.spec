@@ -91,6 +91,7 @@ Provides: cmake(Qt6LottieVectorImageGeneratorPrivatePrivate) = %{EVRD}
 # throws a bad_alloc.
 # This is probably a bigger error somewhere else that needs to be fixed.
 %cmake -G Ninja \
+	-DQT_BUILD_TESTS:BOOL=OFF \
 	-DCMAKE_INSTALL_PREFIX=%{_qtdir} \
 	-DQT_BUILD_EXAMPLES:BOOL=ON \
 	-DQT_WILL_INSTALL:BOOL=ON \
