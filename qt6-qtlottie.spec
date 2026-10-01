@@ -41,6 +41,7 @@ BuildRequires:	cmake(Qt%{major}QuickVectorImage)
 BuildRequires:	cmake(Qt%{major}QuickVectorImageHelpers)
 BuildRequires:	cmake(Qt%{major}QuickVectorImageGeneratorPrivate)
 BuildRequires:	cmake(Qt%{major}QuickShapesPrivate)
+BuildRequires:	cmake(Qt%{major}QuickTimeline)
 BuildRequires:	qt%{major}-cmake
 BuildRequires:	qt%{major}-qtdeclarative
 BuildRequires:	pkgconfig(gl)
